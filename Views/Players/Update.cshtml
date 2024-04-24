@@ -1,0 +1,34 @@
+﻿@model List<Amaliy_ish.Models.Data.Player>
+
+@{
+}
+
+<h1>Players</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>FirstName</th>
+			<th>Age</th>
+			<th>Position</th>
+			<th>TShirtNumber</th>
+			<th>Nationality</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var player in Model)
+		{
+			<tr>
+				<td>@player.Id</td>
+				<td>@player.Name</td>
+				<td>@player.Firstname</td>
+				<td>@player.Age</td>
+				<td>@player.Position</td>
+				<td>@player.TShirtNumber</td>
+				<td>@player.Nationality</td>
+				<td><a href="View/@player.Id">View</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
